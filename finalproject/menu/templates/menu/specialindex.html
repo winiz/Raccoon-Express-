@@ -1,0 +1,42 @@
+{% extends 'menu/managerbase.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header card-header-icon" data-background-color="green">
+      <i class="material-icons">folder_special</i>
+    </div>
+    <div class="card-content">
+      <h4 class="card-title">Current Menu</h4>
+      {% if latest_menu_list %}
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <th>Item Name</th>
+              <th>Description</th>
+	             <th>Nutrition</th>
+	              <th>Price</th>
+            </thead>
+            <tbody>
+              {% for menu in latest_menu_list %}
+                <tr>
+                    <td><a href="/menu/{{ menu.id }}/">{{menu.Name}}</a></td>
+                    <td>{{menu.Description}}</td>
+	                  <td>{{menu.Nutrition}}</td>
+	                  <td>$ {{menu.Price}}</td>
+                </tr>
+              {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+            <p>What?! You have a empty Menu, pleace add food to it now!</p>
+      {% endif %}
+
+        <div><a href="{% url 'menu:specialupdate' %}">+ New Special Menu item</a></div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

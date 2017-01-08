@@ -1,0 +1,25 @@
+{% extends 'menu/managerbase.html' %}
+{% load static %}
+{% block content %}
+
+
+  <div class = "row"> <!-- row 1 S-->
+
+  	<div class="col-md-4 col-md-offset-6"> <!-- card 1 S-->
+    	<div class="card">
+        <div class="card-header card-header-icon" data-background-color="green">
+            <i class="material-icons">folder_special</i>
+        </div>
+        <div class="card-content">
+						<h4 class="cardtitle">Add to Special Menu</h4>
+						<form method = "post" action = ".">
+							{% csrf_token %}
+							{{ form.as_p }}
+							<input class="btn btn-primary" type = "submit" value = "Submit"/>
+						</form>
+        </div>
+      </div>
+    </div> <!-- card 1 E-->
+
+</div><!-- row 1 E-->
+{% endblock %}

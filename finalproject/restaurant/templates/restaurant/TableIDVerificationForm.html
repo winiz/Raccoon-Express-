@@ -1,0 +1,70 @@
+{% extends 'restaurant/homebase.html' %}
+{% load static %}
+{% block content %}
+
+<body class="login-page">
+	<nav class="navbar navbar-primary navbar-transparent navbar-absolute">
+    	<div class="container">
+        	<!-- Brand and toggle get grouped for better mobile display -->
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href="/">Raccoon Express</a>
+        	</div>
+
+        	<div class="collapse navbar-collapse" id="navigation-example">
+        		<ul class="nav navbar-nav navbar-right">
+
+							<li>
+                <a href="/login">
+                  <i class="material-icons">lock_open</i>Log in
+                </a>
+              </li>
+
+              <li>
+                <a href="/createaccount">
+                  <i class="material-icons">assignment</i>Sign up
+                </a>
+              </li>
+
+        		</ul>
+        	</div>
+    	</div>
+    </nav>
+
+	<div class="page-header header-filter" style="background-image: url('{% static "restaurant/img/loginbg.jpg" %}'); background-size: cover; background-position: top center;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+					<div class="card card-signup">
+						<form class="form" id="TableIDForm" method="post" action="">
+							<div class="header header-primary text-center">
+								<h4 class="card-title">Guest Ordering</h4>
+
+							</div>
+							  <p class="description text-center">Obtain your code for ordering from the waiter!</p>
+                <br/><br/>
+              <div class="content text-center">
+								{% csrf_token %}
+
+								<p>Code*:	{{ form.Code }}</p>
+								{% if form.errors %}
+									{{ form.Code.errors }}
+								{% endif %}
+
+								<input id="code-submit" class="btn btn-primary" type="submit" value="Submit"/>
+
+							</div>
+							<div class="footer text-center">
+								<a href="#pablo" class="btn btn-primary btn-simple btn-wd btn-lg">Need Help?</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}

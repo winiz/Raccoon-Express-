@@ -1,0 +1,36 @@
+{% extends 'menu/managerbase.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header card-header-icon" data-background-color="red">
+      <i class="material-icons">description</i>
+    </div>
+    <div class="card-content">
+      <h4 class="card-title">Current Survey Questions</h4>
+      {% if latest_menu_list1 %}
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="text-primary">
+              <th>Question</th>
+              <th>Survey Score(1-10)</th>
+            </thead>
+            <tbody>
+              {% for survey in latest_menu_list1 %}
+                <tr>
+                  <td><a href="/menu/{{ survey.id }}/">{{survey.question}} </a> </td>
+                  <td>{{survey.score}}</td>
+                </tr>
+              {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+            <<p>No Survey Update.</p>
+      {% endif %}
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

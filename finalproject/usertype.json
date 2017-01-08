@@ -1,0 +1,57 @@
+[
+{
+    "model": "restaurant.usertype",
+    "pk": 1,
+    "fields": {
+        "user": 1,
+        "is_customer": true,
+        "is_kitchen": true,
+        "is_server": true,
+        "restaurant": null
+    }
+},
+{
+    "model": "restaurant.usertype",
+    "pk": 2,
+    "fields": {
+        "user": 2,
+        "is_customer": true,
+        "is_kitchen": false,
+        "is_server": false,
+        "restaurant": null
+    }
+},
+{
+    "model": "restaurant.usertype",
+    "pk": 3,
+    "fields": {
+        "user": 3,
+        "is_customer": false,
+        "is_kitchen": false,
+        "is_server": true,
+        "restaurant": null
+    }
+},
+{
+    "model": "restaurant.usertype",
+    "pk": 4,
+    "fields": {
+        "user": 4,
+        "is_customer": false,
+        "is_kitchen": true,
+        "is_server": false,
+        "restaurant": null
+    }
+},
+{
+    "model": "restaurant.usertype",
+    "pk": 5,
+    "fields": {
+        "user": 5,
+        "is_customer": true,
+        "is_kitchen": true,
+        "is_server": true,
+        "restaurant": null
+    }
+}
+]

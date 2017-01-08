@@ -1,0 +1,29 @@
+{% load static %}
+<!--<meta http-equiv="refresh" content="10;http://55.55.55.5:8080/order-placed/">-->
+<h1> Place Your Order <h1>
+
+<h3> Currently Ordered Items </h3>
+
+{% if current_menu_items %}
+    <ul>
+    {% for item in current_menu_items %}
+        <li>{{item.item_name.Name}} - {{item.num_items}}</a></li> 
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Your order is currently empty.</p>
+{% endif %}
+
+<h3> Menu </h3>
+
+{% if latest_menuitem_list %}
+    <ul>
+    {% for item in latest_menuitem_list %}
+        <li><a href="{% url 'restaurant:additem' item.id %}">{{item.Name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No menu items entered.</p>
+{% endif %}
+
+<a href="{% url 'restaurant:OrderPlaced' %}">Start Cooking!</a>

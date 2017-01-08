@@ -1,0 +1,92 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$edFUatzcdkNc$aBjCbI9Z4peycOVOdXCUsdINTPAA2zDzlzO215p0Qi8=",
+        "last_login": "2016-12-06T06:20:01.797Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "admin@email.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-12-06T03:17:34.535Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$5HOksGDcvAdl$GplxKPKFsWxlEM9Hia7qUMy7zDxIrzM6LvWe/9/i/DI=",
+        "last_login": "2016-12-06T06:09:18.072Z",
+        "is_superuser": false,
+        "username": "test",
+        "first_name": "test",
+        "last_name": "test",
+        "email": "test@test.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-12-06T06:09:07.624Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$FCN0NJje6uj4$BsT9ul1O2SBikVSOE/zQxo/sU0LB7qUK9Cb7qwiG2Kg=",
+        "last_login": "2016-12-06T06:12:17.464Z",
+        "is_superuser": false,
+        "username": "server",
+        "first_name": "server",
+        "last_name": "server",
+        "email": "server@server.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-12-06T06:10:30Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$eNuJguMccz6S$7VQsuYiUZWidkU0+UnfqcrcP2rfKeK7NSNdUuorZofg=",
+        "last_login": "2016-12-06T06:15:03.530Z",
+        "is_superuser": false,
+        "username": "kitchen",
+        "first_name": "kitchen",
+        "last_name": "kitchen",
+        "email": "kitchen@kitchen.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-12-06T06:13:26Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$30000$AQw6KSsFO0p0$+rYCe+/p0/6062A1l7ZxfGJtb84wHEBs5srbA333wGY=",
+        "last_login": "2016-12-06T06:21:27.999Z",
+        "is_superuser": false,
+        "username": "manager",
+        "first_name": "manager",
+        "last_name": "manager",
+        "email": "manager@manager.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-12-06T06:19:26Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

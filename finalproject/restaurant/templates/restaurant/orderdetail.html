@@ -1,0 +1,25 @@
+<h1> Table Number: {{order.Table}} </h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+{% block content %}
+<form id="server_form" method="POST">
+{% csrf_token %}
+<div class="fieldWrapper">
+    {{ form.Status.errors }}
+    <label for="{{ form.Status.id_for_label }}">Order Status:</label>
+    <div class="field">
+    {{ form.Status }}
+    </div>
+</div>
+
+<ul>
+{% for menuitem in order.menuitem_set.all %}
+    <li>{{ menuitem.name }}</li>
+{% endfor %}
+</ul>
+<p><input type="submit" value="Update Order"/></p>
+</form>
+{% endblock %}
+<p> Order Start Time: {{order.StartTime}}</p>
+<p> Order Status: {{order.Status}}</p>

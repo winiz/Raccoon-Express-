@@ -1,0 +1,14 @@
+{% load static %}
+<meta http-equiv="refresh" content="20;http://55.55.55.5:8080/order-placed/">
+<h1> Thank You </h1>
+
+<h3> For placing your order on Raccoon Express </h3>
+
+<h4> Your order will be ready shortly. You will be notified of your order's status below. </h4>
+
+<p>Current Order Status: {{ order.Status }}</p>
+
+<a href="{% url 'restaurant:ContactServer' %}">Contact Server</a>
+{% if order.Status == 'COMPLETED' %} <!--only show link to payment if order is completed-->
+  <p> <a href="{% url 'restaurant:payment' %}"> Pay for Order</a> </p>
+{% endif %}

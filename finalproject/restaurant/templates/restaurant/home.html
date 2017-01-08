@@ -1,0 +1,240 @@
+{% extends 'restaurant/homebase.html' %}
+{% load static %}
+
+{% block content %}
+<body class="landing-page">
+    <nav class="navbar navbar-danger navbar-transparent navbar-absolute">
+    	<div class="container">
+        	<!-- Brand and toggle get grouped for better mobile display -->
+        	<div class="navbar-header">
+        		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+            		<span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+        		</button>
+        		<a class="navbar-brand" href=".">Raccoon Express</a>
+        	</div>
+        	<div class="collapse navbar-collapse" id="navigation">
+        		<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="/createaccount">
+									<i class="material-icons">assignment</i> sign up
+								</a>
+							</li>
+
+              <li>
+                <a href="/guest-user">
+                  <i class="material-icons">weekend</i> Guest Access
+                </a>
+              </li>
+
+    					<li>
+								<a href="/login">
+									<i class="material-icons">account_circle</i> login
+								</a>
+					  	</li>
+
+        		</ul>
+        	</div>
+    	</div>
+    </nav>
+
+
+    <div class="page-header header-filter" data-parallax="active" style="background-image: url('{% static "restaurant/img/homebg.jpg" %}');">
+        <div class="container">
+            <div class="row">
+				<div class="col-md-6">
+					<h1 class="title">Your Order Starts With Us.</h1>
+                    <h4>Every restaurant needs a smart ordering system. </h4>
+                    <br />
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
+						<i class="fa fa-play"></i> Don't Watch
+					</a>
+				</div>
+            </div>
+        </div>
+    </div>
+
+	<div class="main main-raised">
+		<div class="container">
+	    	<div class="section text-center">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="title">Not Your Typical Restaurant Ordering System</h2>
+                        <h5 class="description">
+Raccoon Express was created to provide a system that coordinates all aspects of daily restaurant management and operations. </h5>
+                    </div>
+                </div>
+
+				<div class="features">
+					<div class="row">
+						<div class="col-md-4">
+							<div class="info">
+								<div class="icon icon-info">
+									<i class="material-icons">payment</i>
+								</div>
+								<h4 class="info-title">Payment</h4>
+								<p>Stripe Checkout is integrated seemlessly. You can pay for your orders online or in-store. </p>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="info">
+								<div class="icon icon-success">
+									<i class="material-icons">money_off</i>
+								</div>
+								<h4 class="info-title">Free</h4>
+								<p>This ordering system is FREE to get started. Get familiar with the system with 1000 orders free! </p>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="info">
+								<div class="icon icon-danger">
+									<i class="material-icons">web</i>
+								</div>
+								<h4 class="info-title">Web Based</h4>
+								<p>No new hardware is required. Any device with a browser would do, turn your Andriod, iOS or PC machines into ordering terminals in seconds.</p>
+							</div>
+						</div>
+	                </div>
+				</div>
+            </div>
+
+        	<div class="section text-center">
+                <h2 class="title">1 System, 4 Roles</h2>
+
+				<div class="team">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="card card-profile card-plain">
+								<div class="col-md-5">
+									<div class="card-image">
+										<a href="#pablo">
+											<img class="img" src="{% static "restaurant/img/client.jpg" %}" />
+										</a>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="content">
+										<h4 class="card-title">Diner</h4>
+
+										<p class="card-description">
+											Make a quick order without signing up! Or register with us to get great perks, such as saving past orders and collecting loyalty points!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="card card-profile card-plain">
+								<div class="col-md-5">
+									<div class="card-image">
+										<a href="#pablo">
+											<img class="img" src="{% static "restaurant/img/server.jpg" %}"  />
+										</a>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="content">
+										<h4 class="card-title">Waiter</h4>
+
+										<p class="card-description">
+											Get notified when the kitchen has completed an order. Tracking the order in realtime from your mobile device. No more running back to the kitchen unless neccessary!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="card card-profile card-plain">
+								<div class="col-md-5">
+									<div class="card-image">
+										<a href="#pablo">
+											<img class="img" src="{% static "restaurant/img/kitchen.jpg" %}"  />
+										</a>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="content">
+										<h4 class="card-title">Chef</h4>
+										<p class="card-description">
+										  Cook an order when it comes in. Hit the complete button when you are done to notify waiters. It's that easy. No more oily paper!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="card card-profile card-plain">
+								<div class="col-md-5">
+									<div class="card-image">
+										<a href="#pablo">
+											<img class="img" src="{% static "restaurant/img/manager.jpg" %}"  />
+										</a>
+									</div>
+								</div>
+								<div class="col-md-7">
+									<div class="content">
+										<h4 class="card-title">Manager</h4>
+										<p class="card-description">
+											Intrested in quick and easy business analytics to optimize your menu? Look no further!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+            </div>
+
+
+        	<div class="section section-contacts">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="text-center title">Join Us, Restaurant Owners</h2>
+						<h4 class="text-center description">For security reasons, all restaurant accounts have to be approved. We will respond to your request in a couple of hours.</h4>
+                        <form class="contact-form">
+                            <div class="row">
+                                <div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Your Name</label>
+										<input type="email" class="form-control">
+									</div>
+                                </div>
+                                <div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Your Email</label>
+										<input type="email" class="form-control">
+									</div>
+                                </div>
+                            </div>
+
+							<div class="form-group label-floating">
+								<label class="control-label">Your Message</label>
+								<textarea class="form-control" rows="4"></textarea>
+							</div>
+
+                            <div class="row">
+                                <div class="col-md-4 col-md-offset-4 text-center">
+                                    <button class="btn btn-primary btn-raised">
+										Send Message
+									</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+	</div>
+
+{% endblock %}

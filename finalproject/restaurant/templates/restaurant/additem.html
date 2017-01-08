@@ -1,0 +1,15 @@
+{% load static %}
+
+<h1> Add Item </h1>
+
+<p> Menu Item: {{request.session.Name}} </p>
+<p> {{request.session.Description}} - {{request.session.Price}} </p>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Add to Order">
+</form>
+
+<a href="{% url 'restaurant:Menu' %}">Return to Menu</a>
+

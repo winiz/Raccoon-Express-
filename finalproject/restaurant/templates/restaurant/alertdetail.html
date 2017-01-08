@@ -1,0 +1,11 @@
+<h1> Alert Details </h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<p> Table #{{ alert.Order.Table }}</p>
+<p> Message: {{alert.Message}}</p>
+
+<form action="{% url 'restaurant:resolveAlert' alert.id %}" method="post">
+{% csrf_token %}
+<input type="submit" value="Resolve" />
+</form>

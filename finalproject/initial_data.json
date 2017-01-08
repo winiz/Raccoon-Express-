@@ -1,0 +1,30 @@
+[
+{
+  "model": "restaurant.restaurant",
+  "pk": 1,
+  "fields": {
+    "Name": "Club Ilia",
+    "Location": "Cornerstone"
+  }
+},
+{
+  "model": "restaurant.order",
+  "pk": 1,
+  "fields": {
+    "Code": "WcERS9",
+    "Table": 12,
+    "Restaurant": 1,
+    "Status": "CREATED",
+    "StartTime": "2016-11-18T03:42:55.116Z"
+  }
+},
+{
+  "model": "restaurant.alert",
+  "pk": 1,
+  "fields": {
+    "Order": 1,
+    "Message": "Test Alert",
+    "Resolved": 0
+  }
+}
+]
